@@ -31,7 +31,12 @@ abstract class UserStoreBase with Store {
         if (user == null) {
           Modular.to.navigate('/');
         } else {
-          Modular.to.navigate('/home');
+          if (user!.role == null) {
+            user = null;
+            Modular.to.navigate('/error');
+          } else {
+            Modular.to.navigate('/home');
+          }
         }
       });
     }
