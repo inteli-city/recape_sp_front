@@ -7,6 +7,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: ${{ github.ref_name }}
+    permissions:
+        id-token: write
+        contents: write
 
     steps:
       - name: Checkout code
