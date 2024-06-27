@@ -12,7 +12,9 @@ class UserAdapter {
       name: json['name'],
       email: json['email'],
       enabled: json['enabled'],
-      role: RoleEnum.ADMIN,
+      role: json['role_recape'] == null
+          ? null
+          : RoleEnum.values.firstWhere((e) => e.name == json['role_recape']),
     );
   }
 
@@ -22,7 +24,7 @@ class UserAdapter {
       'name': user.name,
       'email': user.email,
       'enabled': user.enabled,
-      'role': user.role.name,
+      'role_recape': user.role?.name,
     };
   }
 }
