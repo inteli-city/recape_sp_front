@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:recape_sp_front/app/modules/splash/ui/pages/error_page.dart';
 import 'package:recape_sp_front/app/modules/splash/ui/pages/splash_page.dart';
 import 'package:recape_sp_front/app/modules/user/stores/user_store.dart';
 import 'package:recape_sp_front/app/shared/datasource/external/http/user_datasource_impl.dart';
@@ -44,6 +45,7 @@ class AppModule extends Module {
       Modular.initialRoute,
       child: (context) => const SplashPage(),
     );
+    r.child('/error', child: (context) => const ErrorPage());
     r.module('/home', module: BaseRecapeModule(), guards: [UserGuard()]);
   }
 }

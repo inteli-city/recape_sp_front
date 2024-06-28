@@ -35,18 +35,19 @@ abstract class BaseRecapeControllerBase with Store {
   List<ObraEntity> obras = [];
 
   @action
-  void filter(
-      {String? filterVia,
-      SubprefeituraEnum? filterSubprefeitura,
-      DateTimeRange? filterDataTermino,
-      FonteEnum? filterFonte,
-      StatusObraEnum? filterStatusObra,
-      String? filterId,
-      StatusGeometriaEnum? filterStatusGeometria,
-      String? filterLogradouro,
-      bool? filterMotoverficacaoConvias,
-      bool? filterMotoverficacaoIntelicity,
-      DateTimeRange? filterDataConvias}) {
+  void filter({
+    String? filterVia,
+    SubprefeituraEnum? filterSubprefeitura,
+    DateTimeRange? filterDataTermino,
+    FonteEnum? filterFonte,
+    StatusObraEnum? filterStatusObra,
+    String? filterId,
+    StatusGeometriaEnum? filterStatusGeometria,
+    String? filterLogradouro,
+    bool? filterMotoverficacaoConvias,
+    bool? filterMotoverficacaoIntelicity,
+    DateTimeRange? filterDataConvias,
+  }) {
     changeState(BaseRecapeLoadingState());
 
     final filteredObras = obras.where((obra) {

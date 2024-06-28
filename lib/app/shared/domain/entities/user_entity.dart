@@ -4,7 +4,7 @@ class UserEntity {
   final String userId;
   final String name;
   final String email;
-  final RoleEnum role;
+  final RoleEnum? role;
   final bool enabled;
 
   UserEntity({
