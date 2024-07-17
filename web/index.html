@@ -32,8 +32,48 @@
   <title>Cadastro Recape</title>
   <link rel="manifest" href="manifest.json">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiEm6Y6LChYQ6JsG7-b8yARxjjco9acYM"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    
+    .container {
+      background-color: #232F49;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .loader {
+      border: 16px solid #6e6e6e; /* Light grey */
+      border-radius: 50%;
+      border-top: 16px solid #fff;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+  </style>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
+
+  <div class="container">
+    <div class="loader">
+
+    </div>
+  </div>
 </body>
 </html>
