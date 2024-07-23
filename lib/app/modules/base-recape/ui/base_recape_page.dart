@@ -103,21 +103,6 @@ class _BaseRecapePageState extends State<BaseRecapePage> {
                           AppTextStyles.headline3.copyWith(color: Colors.white),
                     ),
                   ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.red,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8))),
-                    onPressed: () async {},
-                    child: Text(
-                      'LOGOUT',
-                      style:
-                          AppTextStyles.headline3.copyWith(color: Colors.white),
-                    ),
-                  ),
                 ],
               ),
               const Padding(
