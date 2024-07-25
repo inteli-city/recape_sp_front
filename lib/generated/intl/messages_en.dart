@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
             'PARALELEPIPEDO': 'PARALELEPÍPEDO',
             'PAVIMENTACAO': 'PAVIMENTAÇÃO',
             'CALCADA': 'CALÇADA',
+            'SPOBRAS': 'SP OBRAS',
             'other': 'Uninformed',
           })}";
 

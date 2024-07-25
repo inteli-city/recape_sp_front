@@ -13,6 +13,7 @@ enum FonteEnum {
   PARALELEPIPEDO,
   PAVIMENTACAO,
   CALCADA,
+  SPOBRAS,
 }
 
 extension FonteEnumExtension on FonteEnum {
