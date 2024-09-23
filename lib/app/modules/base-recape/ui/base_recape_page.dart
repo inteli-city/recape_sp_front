@@ -66,7 +66,8 @@ class _BaseRecapePageState extends State<BaseRecapePage> {
                   const SizedBox(
                     width: 8,
                   ),
-                  userStore.user!.role == RoleEnum.CONVIAS_VIEW
+                  userStore.user!.role == RoleEnum.CONVIAS_VIEW ||
+                          userStore.user!.role == RoleEnum.FISCALIZACAO
                       ? const SizedBox.shrink()
                       : ElevatedButton(
                           style: ElevatedButton.styleFrom(
