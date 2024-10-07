@@ -62,7 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
             'A_CONTRATAR_CURTO_PRAZO': 'To be hired (Short Term)',
             'CONTRATADO': 'Hired',
             'EM_EXECUCAO': 'In Execution',
-            'CONLUIDO_RATIFICAR': 'Concluded - Ratificar',
+            'CONCLUIDO_RATIFICAR': 'Concluded - Ratificar',
             'CONCLUIDO': 'Concluded',
             'EXCLUIDO': 'Excluded',
             'other': 'Uninformed',

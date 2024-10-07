@@ -62,7 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
             'A_CONTRATAR_CURTO_PRAZO': 'A contratar (Curto Prazo)',
             'CONTRATADO': 'Contratado',
             'EM_EXECUCAO': 'Em execução',
-            'CONLUIDO_RATIFICAR': 'Concluído - Ratificar',
+            'CONCLUIDO_RATIFICAR': 'Concluído - Ratificar',
             'CONCLUIDO': 'Concluído',
             'EXCLUIDO': 'Excluído',
             'other': 'Não informado',
