@@ -296,10 +296,40 @@ class _CreateObraDialogState extends State<CreateObraDialog> {
                               var state = controller.state;
                               if (state is SuccessCreateState) {
                                 Modular.to.pop();
+                                showDialog(
+                                    context: context,
+                                    builder: (_) {
+                                      return AlertDialog(
+                                        title: const Text('Sucesso'),
+                                        content: const Text(
+                                            'Obra criada com sucesso!'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () {
+                                              Modular.to.pop();
+                                            },
+                                            child: const Text('OK'),
+                                          ),
+                                        ],
+                                      );
+                                    });
                               } else if (state is ErrorCreateState) {
-                                html.window.alert(
-                                  'Erro ao criar a obra: ${state.error.errorMessage}',
-                                );
+                                showDialog(
+                                    context: context,
+                                    builder: (_) {
+                                      return AlertDialog(
+                                        title: const Text('Erro'),
+                                        content: Text(state.error.errorMessage),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () {
+                                              Modular.to.pop();
+                                            },
+                                            child: const Text('OK'),
+                                          ),
+                                        ],
+                                      );
+                                    });
                               }
                             }
                           },

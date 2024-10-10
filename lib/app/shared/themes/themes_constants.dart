@@ -25,6 +25,12 @@ ThemeData lightTheme = ThemeData(
     titleMedium: AppTextStyles.subtitle1,
     titleSmall: AppTextStyles.subtitle2,
   ),
+  textButtonTheme: TextButtonThemeData(
+    style: ButtonStyle(
+      textStyle: WidgetStateProperty.all<TextStyle>(AppTextStyles.bodyText1),
+      foregroundColor: WidgetStateProperty.all<Color>(AppColors.primaryBlue),
+    ),
+  ),
   progressIndicatorTheme:
       ProgressIndicatorThemeData(color: AppColors.primaryBlue),
   elevatedButtonTheme: ElevatedButtonThemeData(

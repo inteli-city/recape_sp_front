@@ -1,16 +1,14 @@
 {
-    "stateNameSchema": "{schema, select, SUSPENSO{Suspended} PLANEJADO{Planning} A_CONTRATAR{To be hired} A_CONTRATAR_CURTO_PRAZO{To be hired (Short Term)} CONTRATADO{Hired} EM_EXECUCAO{In Execution} CONCLUIDO{Concluded} EXCLUIDO{Excluded} other{Uninformed}}",
-    "fonteNameSchema": "{schema, select, CDHU{CDHU} CONSEMAVI_2017_2020{CONSEMAVI 2017-2020} CONSEMAVI_2021_2024{CONSEMAVI 2021-2024} DECRETO_58756_2019_DEMAIS{DECRETO 58.756/2019 (DEMAIS)} DECRETO_58756_2019_SABESP{DECRETO 58.756/2019 (SABESP)} SABESP_2020{SABESP 2020} SABESP_2022_2023{SABESP 2022-2023} PARALELEPIPEDO{PARALELEPÍPEDO} PAVIMENTACAO{PAVIMENTAÇÃO} CALCADA{CALÇADA} SPOBRAS{SP OBRAS} other{Uninformed}}",
-    "revestimentoNameSchema": "{schema, select, SMA{SMA} CBUQ{CBUQ} CONCRETO{CONCRETE} INTERTRAVADO{INTERLOCKED} other{Uninformed}}",
-    "statusGeometriaNameSchema": "{schema, select, NOVO{New way: without geometry} PRE_PROCESSADO{Preprocessed Geometry} PROCESSADO{Processed Geometry} APROVADO{Approved and Finalized Geometry} EDITADO{Edited geometry: awaiting processing} other{Não informado}}",
-    "activeNameSchema": "{schema, select, ATIVO{Active} INATIVO{Inactive} other{}}",
-    "boolNameSchema": "{schema, select, SIM{Yes} NAO{No} other{Uninformed}}",
-    "subprefeituraNameSchema": "{schema, select, AD{AD - CIDADE ADEMAR} AF{AF - ARICANDUVA/FORMOSA/CARRAO} BT{BT - BUTANTA} CL{CL - CAMPO LIMPO} CS{CS - CAPELA DO SOCORRO} CT{CT - CIDADE TIRADENTES} CV{CV - CASA VERDE/CACHOEIRINHA} EM{EM - ERMELINO MATARAZZO} FO{FO - FREGUESIA/BRASILANDIA} G{G - GUAIANASES} IP{IP - IPIRANGA} IQ{IQ - ITAQUERA} IT{IT - ITAIM PAULISTA} JA{JA - JABAQUARA} JT{JT - JACANA/TREMEMBE} LA{LA - LAPA} MB{MB - M BOI MIRIM} MG{MG - VILA MARIA/VILA GUILHERME} MO{MO - MOOCA} MP{MP - SAO MIGUEL PAULISTA} PA{PA - PARELHEIROS} PE{PE - PENHA} PI{PI - PINHEIROS} PJ{PJ - PIRITUBA/JARAGUA} PR{PR - PERUS} SA{SA - SANTO AMARO} SB{SB - SAPOPEMBA} SE{SE - SE} SM{SM - SAO MATEUS} ST{ST - SANTANA/TUCURUVI} VM{VM - VILA MARIANA} VP{VP - VILA PRUDENTE} other{Não informado}}",
-
-    "fieldRequired": "Campo é obrigatório",
-
-    "noInternetConnectionErrorMessage": "No internet connection",
-    "noDataFoundError": "No data found",
-    "unknownError": "Unknown error, please try again",
-    "textErrorHome": "An error was found in the parameters, following parameters are required: "
+  "stateNameSchema": "{schema, select, SUSPENSO{Suspended} PLANEJADO{Planning} A_CONTRATAR{To be hired} A_CONTRATAR_CURTO_PRAZO{To be hired (Short Term)} CONTRATADO{Hired} EM_EXECUCAO{In Execution} CONCLUIDO_RATIFICAR{Concluded - Ratificar} CONCLUIDO{Concluded} EXCLUIDO{Excluded} other{Uninformed}}",
+  "fonteNameSchema": "{schema, select, CDHU{CDHU} CONSEMAVI_2017_2020{CONSEMAVI 2017-2020} CONSEMAVI_2021_2024{CONSEMAVI 2021-2024} DECRETO_58756_2019_DEMAIS{DECRETO 58.756/2019 (DEMAIS)} DECRETO_58756_2019_SABESP{DECRETO 58.756/2019 (SABESP)} SABESP_2020{SABESP 2020} SABESP_2022_2023{SABESP 2022-2023} PARALELEPIPEDO{PARALELEPÍPEDO} PAVIMENTACAO{PAVIMENTAÇÃO} CALCADA{CALÇADA} SPOBRAS{SP OBRAS} other{Uninformed}}",
+  "revestimentoNameSchema": "{schema, select, SMA{SMA} CBUQ{CBUQ} CONCRETO{CONCRETE} INTERTRAVADO{INTERLOCKED} other{Uninformed}}",
+  "statusGeometriaNameSchema": "{schema, select, NOVO{New way: without geometry} PRE_PROCESSADO{Preprocessed Geometry} PROCESSADO{Processed Geometry} APROVADO{Approved and Finalized Geometry} EDITADO{Edited geometry: awaiting processing} other{Não informado}}",
+  "activeNameSchema": "{schema, select, ATIVO{Active} INATIVO{Inactive} other{}}",
+  "boolNameSchema": "{schema, select, SIM{Yes} NAO{No} other{Uninformed}}",
+  "subprefeituraNameSchema": "{schema, select, AD{AD - CIDADE ADEMAR} AF{AF - ARICANDUVA/FORMOSA/CARRAO} BT{BT - BUTANTA} CL{CL - CAMPO LIMPO} CS{CS - CAPELA DO SOCORRO} CT{CT - CIDADE TIRADENTES} CV{CV - CASA VERDE/CACHOEIRINHA} EM{EM - ERMELINO MATARAZZO} FO{FO - FREGUESIA/BRASILANDIA} G{G - GUAIANASES} IP{IP - IPIRANGA} IQ{IQ - ITAQUERA} IT{IT - ITAIM PAULISTA} JA{JA - JABAQUARA} JT{JT - JACANA/TREMEMBE} LA{LA - LAPA} MB{MB - M BOI MIRIM} MG{MG - VILA MARIA/VILA GUILHERME} MO{MO - MOOCA} MP{MP - SAO MIGUEL PAULISTA} PA{PA - PARELHEIROS} PE{PE - PENHA} PI{PI - PINHEIROS} PJ{PJ - PIRITUBA/JARAGUA} PR{PR - PERUS} SA{SA - SANTO AMARO} SB{SB - SAPOPEMBA} SE{SE - SE} SM{SM - SAO MATEUS} ST{ST - SANTANA/TUCURUVI} VM{VM - VILA MARIANA} VP{VP - VILA PRUDENTE} other{Não informado}}",
+  "fieldRequired": "Campo é obrigatório",
+  "noInternetConnectionErrorMessage": "No internet connection",
+  "noDataFoundError": "No data found",
+  "unknownError": "Unknown error, please try again",
+  "textErrorHome": "An error was found in the parameters, following parameters are required: "
 }
