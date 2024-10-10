@@ -13,7 +13,6 @@ class UserDatasourceImpl implements IUserDatasource {
   Future<UserEntity> loginUser() async {
     try {
       final response = await _httpClient.post('/login-user');
-
       return UserAdapter.fromJson(response.data['user']);
     } on Failure catch (e, stackTrace) {
       if (e is TimeOutError) {
