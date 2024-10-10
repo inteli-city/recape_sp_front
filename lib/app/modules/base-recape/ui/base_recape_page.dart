@@ -225,6 +225,7 @@ class _BaseRecapePageState extends State<BaseRecapePage> {
                                   controller: dataGridController,
                                   allowSorting: true,
                                   allowMultiColumnSorting: true,
+                                  allowTriStateSorting: true,
                                   columnWidthMode: ColumnWidthMode.fill,
                                   rowHeight: 80,
                                   selectionMode: SelectionMode.multiple,
@@ -238,6 +239,7 @@ class _BaseRecapePageState extends State<BaseRecapePage> {
                                     _getColumn('ate', 'Até'),
                                     _getColumn(
                                         'subprefeitura', 'Subprefeitura'),
+                                    _getColumn('dataCadastro', 'Data Cadastro'),
                                     _getColumn('dataTermino', 'Data Término'),
                                     _getColumn(
                                         'statusGeometria', 'Status Geometria'),
@@ -288,17 +290,17 @@ class _BaseRecapePageState extends State<BaseRecapePage> {
 
   GridColumn _getColumn(String columnName, String? label) {
     return GridColumn(
-      maximumWidth: ScreenHelper.width(context) * 0.14,
       columnName: columnName,
       label: Container(
-        padding: const EdgeInsets.all(16.0),
-        alignment: Alignment.centerLeft,
+        padding: const EdgeInsets.all(8),
+        alignment: Alignment.center,
         child: label == null
             ? null
             : Text(
                 label,
-                overflow: TextOverflow.ellipsis,
-                style: AppTextStyles.headline3,
+                style: AppTextStyles.bodyText2.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
       ),
     );
@@ -322,10 +324,15 @@ class ObraDataSourceTable extends DataGridSource {
         DataGridCell<String>(
             columnName: 'subprefeitura', value: e.subprefeitura!.name),
         DataGridCell<DateTime?>(
-            columnName: 'dataTermino',
-            value: e.dataTermino == null
-                ? null
-                : DateFormat("dd/MM/yyyy").parse(e.dataTermino!)),
+          columnName: 'dataCadastro',
+          value: DateFormat("dd/MM/yyyy").parse(e.dataCriacao),
+        ),
+        DataGridCell<DateTime?>(
+          columnName: 'dataTermino',
+          value: e.dataTermino == null
+              ? null
+              : DateFormat("dd/MM/yyyy").parse(e.dataTermino!),
+        ),
         DataGridCell<String>(
             columnName: 'statusGeometria', value: e.statusGeometria.typeName),
         DataGridCell<ObraEntity>(
@@ -346,11 +353,20 @@ class ObraDataSourceTable extends DataGridSource {
     return DataGridRowAdapter(
         cells: row.getCells().map<Widget>((dataGridCell) {
       return Container(
-        padding: const EdgeInsets.all(16.0),
-        child: dataGridCell.columnName == 'dataTermino'
-            ? Text(dataGridCell.value == null
-                ? ''
-                : DateFormat("dd/MM/yyyy").format(dataGridCell.value!))
+        padding: const EdgeInsets.all(8.0),
+        alignment: (dataGridCell.columnName == 'dataTermino' ||
+                dataGridCell.columnName == 'dataCadastro' ||
+                dataGridCell.columnName == 'id'
+            ? Alignment.centerRight
+            : Alignment.centerLeft),
+        child: dataGridCell.columnName == 'dataTermino' ||
+                dataGridCell.columnName == 'dataCadastro'
+            ? Text(
+                dataGridCell.value == null
+                    ? ''
+                    : DateFormat("dd/MM/yyyy").format(dataGridCell.value!),
+                style: AppTextStyles.subtitle1,
+              )
             : dataGridCell.columnName == 'edit'
                 ? LayoutBuilder(builder: (context, BoxConstraints constraints) {
                     return Row(
@@ -418,7 +434,8 @@ class ObraDataSourceTable extends DataGridSource {
                                       ))
                         ]);
                   })
-                : Text(dataGridCell.value.toString()),
+                : Text(dataGridCell.value.toString(),
+                    style: AppTextStyles.subtitle1),
       );
     }).toList());
   }
