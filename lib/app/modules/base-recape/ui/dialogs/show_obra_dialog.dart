@@ -140,7 +140,9 @@ class ShowObraDialog extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 8),
-                Center(child: fileDownload(obra.image)),
+                if (obra.image !=
+                    'https://intelicity-assets.s3.sa-east-1.amazonaws.com/placeholder.jpg')
+                  Center(child: fileDownload(obra.image)),
               ],
             ),
           ),
