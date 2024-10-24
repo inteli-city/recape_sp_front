@@ -86,7 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
             'CT': 'CT - CIDADE TIRADENTES',
             'CV': 'CV - CASA VERDE/CACHOEIRINHA',
             'EM': 'EM - ERMELINO MATARAZZO',
-            'FO': 'FO - FREGUESIA/BRASILANDIA',
+            'FB': 'FB - FREGUESIA/BRASILANDIA',
             'G': 'G - GUAIANASES',
             'IP': 'IP - IPIRANGA',
             'IQ': 'IQ - ITAQUERA',
