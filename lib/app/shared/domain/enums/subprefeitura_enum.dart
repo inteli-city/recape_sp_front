@@ -11,7 +11,7 @@ enum SubprefeituraEnum {
   CT,
   CV,
   EM,
-  FO,
+  FB,
   G,
   IP,
   IQ,
